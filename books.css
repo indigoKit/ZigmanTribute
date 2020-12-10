@@ -1,0 +1,110 @@
+:root {
+  --bw: 180px;
+  --bh: 288px;
+}
+
+.book-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 2rem;
+}
+
+.book {
+  width: var(--bw);
+  height: var(--bh);
+  margin: 10px;
+  float: left;
+  border: 3px solid var(--lightgold);
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  box-shadow: 1px 1px 2px var(--darkgold);
+  cursor: default;
+  background: var(--goldgradient);
+  display: flex;
+}
+.book .mask,
+.book .content {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  width: var(--bw);
+  height: var(--bh);
+  top: 0;
+  left: 0;
+  padding-bottom: 2rem;
+}
+
+.book img {
+  width: var(--bw);
+  height: auto;
+  display: block;
+  transform: scaleY(1);
+  transition: all 1s ease-in-out;
+}
+
+.book h3 {
+  text-transform: uppercase;
+  color: rgb(5, 5, 5);
+  text-align: center;
+  position: relative;
+  font-size: 1.5rem;
+  margin: 20px 0 0 0;
+}
+
+.book p {
+  font-style: italic;
+  font-size: 1.3rem;
+  position: relative;
+  color: rgb(5, 5, 5);
+  padding: 10px 20px 20px;
+  text-align: center;
+}
+
+.book a.info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  background: rgb(5, 5, 5);
+  color: var(-white);
+  text-transform: uppercase;
+  box-shadow: 0 0 1px #000;
+}
+
+.book a.info:hover {
+  box-shadow: 0 0 5px #000;
+}
+
+.book .mask {
+  background-color: rgba(255, 231, 179, 0.3);
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+.book p {
+  color: #333;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+}
+.book a.info {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+}
+
+.book:hover img {
+  transform: scale(10);
+  opacity: 0;
+}
+/*changing to visible on hover*/
+.book:hover .mask {
+  opacity: 1;
+}
+.book:hover h2,
+.book:hover p,
+.book:hover a.info {
+  transform: scale(1);
+  opacity: 1;
+}
