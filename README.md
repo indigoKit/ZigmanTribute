@@ -1,4 +1,4 @@
-# ZigmanTribute
+# ZiglarTribute
 Zig Ziglar tribute page css practice
 
 One page tribute page 
