@@ -1,5 +1,5 @@
 # ZigmanTribute
-Zig Zigman tribute page css practice
+Zig Ziglar tribute page css practice
 
 One page tribute page 
 responsive design desktop first
